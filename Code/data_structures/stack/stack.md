@@ -6,7 +6,7 @@ To understand this consider stack as a container which can store different data 
 ![first](./first.png "stack")
 We can put our data members in the container(stack) and can keep track of it.
 
-#### Basic operations are performed in the stack:
+####Basic operations are performed in the stack:
 
 * **Push**: Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
 ![second](./push.png "Push")
@@ -19,13 +19,12 @@ We can see that we can only put our new data member above the last one data  mem
 Here again we can see that we can pop(remove) the data only from the top most position here in this case member 3 is at top.
 This is the reason why we call it LIFO or FILO
 <br>
-* **Peek** or **Top**: Returns the top element of the stack.
+* **Peek or Top**: Returns the top element of the stack.
 It keeps track of the top position of the stack.
-* ![fourth](./top_isEmpty.png "Top_isEmpty") 
-* **isEmpty** / **isFull**: Returns true if the stack is empty, else false. It is checked every time when data is going to insert in the stack.
+![](./top_isEmpty.png "Top and isEmpty")
 
-<br>
-<!-- ### Implementation: 
+* **isEmpty/isFull**: Returns true if the stack is empty, else false. It is checked every time when data is going to insert in the stack.
+ ### Implementation: 
 There are two ways to implement a stack: 
 * Using array
-* Using linked list -->
+* Using linked list
