@@ -21,10 +21,8 @@ This is the reason why we call it LIFO or FILO
 <br>
 * **Peek** or **Top**: Returns the top element of the stack.
 It keeps track of the top position of the stack.
-
-![fourth](./top_isEmpty.png "Top_isEmpty")
-
 * **isEmpty** / **isFull**: Returns true if the stack is empty, else false. It is checked every time when data is going to insert in the stack.
+* ![fourth](./top_isEmpty.png "Top_isEmpty")
 <br>
 ### Implementation: 
 There are two ways to implement a stack: 
