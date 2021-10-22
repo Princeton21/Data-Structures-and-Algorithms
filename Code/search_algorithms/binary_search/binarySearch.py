@@ -1,13 +1,17 @@
-list = [1,2,3,4,5,6,7,8,9,10]
+target = int(input("enter search target: "))
 def binarySearch(list,target):
+    maximum = len(list) -1
+    minimum = 0
     result = None
     while (result != target):
-        midPoint = list[int(len(list)/2)-1]
+        m = (maximum + minimum) // 2
+        midPoint = list[m]
         if(target > midPoint):
-            list = list[midPoint:]
+            minimum = m +1
+        elif(target < midPoint):
+            maximum = m -1
         else:
-            list = list[:midPoint-1]
+            return m
         result = midPoint
-    return result
-
-print(binarySearch(list,1))
+    return m
+print(binarySearch([1,2,3,4,5,6,7,8,9,10],target))
