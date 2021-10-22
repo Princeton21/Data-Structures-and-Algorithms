@@ -17,8 +17,9 @@ We can see that we can only put our new data member above the last one data  mem
 * **Pop**: Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition.
 ![third](./pop.png "Pop")
 Here again we can see that we can pop(remove) the data only from the top most position here in this case member 3 is at top.
-This is the reason why we call it LIFO or FILO
+This is the reason why we call it LIFO or FILO.
 <br>
+
 * **Peek or Top**: Returns the top element of the stack.
 It keeps track of the top position of the stack.
 ![fourth](./top_isEmpty.png)
