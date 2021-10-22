@@ -5,7 +5,8 @@
 <div/>
 Hurry!!! ,there's less than a # week # left for this event.
 
-You can provide your solutions in `C`, `C++`, `Java`, `JavaScript`,`Python` or any other language.🎊
+You can provide your solutions in `C`, `C++`, `Java`, `JavaScript`,`Python` or any other language.🎊<br/>
+  And remember, it's never too late to start 🚀👩‍🚀👨‍🚀
   
 <h1>The top 3 reasons why THIS REPOSITORY is different from others..<h1/>
 <h3>1) Implementation of programs in the language of your choice.🎊🎊🎊<br/><br/>
