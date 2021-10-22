@@ -6,3 +6,5 @@
 Hurry!!! ,there's less than a week left for this event.
 
 You can provide your solutions in `C`, `C++`, `Java`, `JavaScript`,`Python` or any other language.🎊
+  
+# IF YOU ARE GRATEFUL DON'T FORGET TO ⭐STAR⭐ THIS REPOSITORY !!✨✨
