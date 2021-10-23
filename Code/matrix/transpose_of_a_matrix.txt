@@ -1,3 +1,5 @@
+//Finding transpose of Matrix in C++
+
 #include<iostream>
     using namespace std;
     int main()
@@ -54,4 +56,4 @@
 
    return 0;
     }
-    io
+   
