@@ -18,5 +18,3 @@ for i in range(m):
     for j in range(n):
         print(transpose[i][j], " ", end='')
     print() 
-
-    
