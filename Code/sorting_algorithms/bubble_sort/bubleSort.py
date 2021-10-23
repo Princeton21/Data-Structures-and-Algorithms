@@ -1,6 +1,7 @@
-# @description: a bubble sort algorithm
-# @param arr: an array of numbers to be sorted
-# @returns: array sorted from low to high
+# @description: This is the implementation of bubble sort in python.
+# @param arr: an array of numbers to be sorted.
+# @returns: array sorted from low to high.
+# The time complexity of the algorithm is O(n^2), and the space complexity is O(1).
 
 def bubbleSort(arr):
     completed = False
@@ -18,5 +19,5 @@ def bubbleSort(arr):
             completed = True
     return arr
 
-list = [5,4,3,2,1,3,5,2,123,56216,634,6,34]
+list = [5,4,3,2,1,3,5,2,123,56216,634,6,34] # Test Case
 print(bubbleSort(list))
