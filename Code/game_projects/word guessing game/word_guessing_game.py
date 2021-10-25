@@ -23,7 +23,7 @@ while lives>0:
     else:
         if lives==1:
             print(unknown)
-            print("you are run out of lifes.\nBetter luck nect time!")
+            print("you are run out of lifes.\nBetter luck next time!")
         elif lives>0:
             print(unknown)
             print("you lost a life.try again!")
