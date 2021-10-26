@@ -118,8 +118,8 @@ def Rolldice(rolls):
 
 def main():
 
-    pp("1. Roll a dice:")  # roll for one dice
-    pp("2. Roll multiple dice:")  # roll for multiple dice
+    pp("1. Roll a dice")  # roll for one dice
+    pp("2. Roll multiple dice")  # roll for multiple dice
     pp("3. Exit from Game\n\n")  # exit() function to exit from game.
 
     choice = int(input(stylize("Enter choice: ", _GREEN_BOLD)))
