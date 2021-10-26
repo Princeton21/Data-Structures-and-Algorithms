@@ -1,63 +1,83 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
-// this class will be used for dealing with items and their value and weights,
-// and it's also going to store value per unit weight of each item
-
+// Structure for an item which stores
+// weight & corresponding value of Item
 struct Item {
-    int wt;
-    int val;
-    int ind;
-    int cost;
+	int value, weight;
+
+	// Constructor
+	Item(int value, int weight)
+		: value(value), weight(weight)
+	{
+	}
 };
 
-bool compare_item(Item const& lhs, Item const& rhs) {
-    return lhs.cost < rhs.cost;
+// Comparison function to sort Item
+// according to val/weight ratio
+bool cmp(struct Item a, struct Item b)
+{
+	double r1 = (double)a.value / a.weight;
+	double r2 = (double)b.value / b.weight;
+	return r1 > r2;
 }
 
-// Takes weight and value lists, as well as capacity of the sack
-// as the arguments and returns the max value you can carry
-// in the sack given the weights and values of each item.
-float get_max_value(vector<int> wt, vector<int> val, int capacity) {
-    // function to get maximum value
-    vector<Item> i_val;
-    for (unsigned int i = 0; i < wt.size(); i++) {
-        Item it;
-        it.wt = wt[i];
-        it.val = val[i];
-        it.ind = i;
-        it.cost = (int) it.val / it.wt;
-        i_val.push_back(it);
-    }
-    // Sort the i_val vector in decreasing order of cost
-    sort(i_val.begin(), i_val.end(), &compare_item);
-    reverse(i_val.begin(), i_val.end());
+// Main greedy function to solve problem
+double fractionalKnapsack(struct Item arr[],
+						int N, int size)
+{
+	// Sort Item on basis of ratio
+	sort(arr, arr + size, cmp);
 
-    // Max value that you can get in the knapsack
-    float total_value = 0;
-    for (Item i : i_val) {
-        int curr_wt = (int) i.wt;
-        int curr_val = (int) i.val;
-        if (capacity - curr_wt >= 0) {
-            capacity -= curr_wt;
-            total_value += curr_val;
-        } else {
-            float fraction = (float) capacity / (float) curr_wt;
-            total_value += curr_val * fraction;
-            capacity = (int) capacity - (curr_wt * fraction);
-            break;
-        }
-    }
-    return total_value;
+	// Current weight in knapsack
+	int curWeight = 0;
+
+	// Result (value in Knapsack)
+	double finalvalue = 0.0;
+
+	// Looping through all Items
+	for (int i = 0; i < size; i++) {
+
+		// If adding Item won't overflow,
+		// add it completely
+		if (curWeight + arr[i].weight <= N) {
+			curWeight += arr[i].weight;
+			finalvalue += arr[i].value;
+		}
+
+		// If we can't add current Item,
+		// add fractional part of it
+		else {
+			int remain = N - curWeight;
+			finalvalue += arr[i].value
+						* ((double)remain
+							/ arr[i].weight);
+
+			break;
+		}
+	}
+
+	// Returning final value
+	return finalvalue;
 }
 
-
+// Driver Code
 int main()
 {
-    vector<int> wt = {10, 40, 20, 30};
-    vector<int> val = {60, 40, 100, 120};
-    int capacity = 50;
-    float max_value = get_max_value(wt, val, capacity);
-    cout << "Maximum value in Knapsack = " << max_value << "\n";
-    return 0;
+	// Weight of knapsack
+	int N = 60;
+
+	// Given weights and values as a pairs
+	Item arr[] = { { 100, 10 },
+				{ 280, 40 },
+				{ 120, 20 },
+				{ 120, 24 } };
+
+	int size = sizeof(arr) / sizeof(arr[0]);
+
+	// Function Call
+	cout << "Maximum profit earned = "
+		<< fractionalKnapsack(arr, N, size);
+	return 0;
 }
