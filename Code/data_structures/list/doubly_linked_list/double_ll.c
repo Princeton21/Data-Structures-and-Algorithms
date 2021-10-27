@@ -1,3 +1,4 @@
+//prpgram to implement doubly linked list
 typedef struct node
 {
     int data;
