@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product Page</h1>
+    <form action="" id="form">
+        <input type="text" id="name" placeholder="enter the name of product">
+        <input type="number" name="" id="price" placeholder="Enter Price">
+        <!-- <select name="" id="select">
+            <option value="tea">tea</option>
+            <option value="shoes">Shoes</option>
+            <option value="shirt">Shirt</option>
+        </select> -->
+        <input type="url" name="" id="img" placeholder="Enter image url">
+        <input type="Submit" value="Add">
+        
+    </form><br/>
+    <button onclick="prodpage()">Products</button>
+   
+</body>
+<script>
+document.getElementById("form").addEventListener("submit",addItem)
+var prod=JSON.parse(localStorage.getItem("Products"))||[]
+function addItem(e){
+    e.preventDefault()
+    var product={
+        name:form.name.value,
+        price:form.price.value,
+        // type:form.select.value,
+        image:form.img.value,
+    }
+    prod.push(product)
+    localStorage.setItem("Products",JSON.stringify(prod))
+    form.name.value=''
+    form.price.value=''
+    form.img.value=''
+}
+function prodpage(){
+    window.location.href='product.html'
+}
+</script>
+</html>

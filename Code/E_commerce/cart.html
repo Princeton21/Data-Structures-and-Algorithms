@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #cont{
+            width: fit-content;
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px;
+            grid-gap: 20px;
+            margin: auto;
+        }
+        #cont>div{
+            height: 400px;
+        }
+        img{
+            height: 65%;
+            width: 100%;
+            
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Card Page</h1>
+    <div id="cont">
+    </div>
+</body>
+<script>
+    var cartItem=JSON.parse(localStorage.getItem("cartItem"))
+    var h1=document.querySelector("h1")
+    cartItem?h1.textContent="Cart Items":h1.textContent="Your cart is empty"
+    var cont=document.querySelector("#cont")
+
+    cartItem.map(function(el){
+            var div=document.createElement("div")
+            // var name=el.name;
+            // var price=el.price; 
+            // var image=el.image;
+            var img=document.createElement("img")
+            img.setAttribute("src",el.image)
+            var h2=document.createElement("h2")
+            h2.textContent=el.name
+            var p=document.createElement("p")
+            p.textContent=el.price+" INR"
+            div.append(img,h2,p)
+            cont.append(div)
+        })
+</script>
+</html>

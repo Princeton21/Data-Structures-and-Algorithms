@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont{
+            width: fit-content;
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px;
+            grid-gap: 20px;
+            margin: auto;
+        }
+        #cont>div{
+            height: 400px;
+        }
+        img{
+            height: 65%;
+            width: 100%;
+            
+        }
+        h2{
+            text-align: center;
+        }
+        button{
+            background-color: blue;
+            width: 100%;
+            height: 9%;
+            color: red;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <div id="cont">
+    </div>
+</body>
+<script>
+    var product=JSON.parse(localStorage.getItem("Products"))
+    var cont=document.querySelector("#cont")
+    if(!product){
+        var h1=document.querySelector("h1")
+        h1.style.textAlign='center'
+        h1.textContent="No product in cart"
+    }else{
+        product.map(function(el){
+            var div=document.createElement("div")
+            // var name=el.name;
+            // var price=el.price; 
+            // var image=el.image;
+            var img=document.createElement("img")
+            img.setAttribute("src",el.image)
+            var h2=document.createElement("h2")
+            h2.textContent=el.name
+            var p=document.createElement("p")
+            p.textContent=el.price+" INR"
+            var btn=document.createElement("button")
+            btn.textContent="Add"
+            btn.addEventListener("click",function(){
+                addToCart(el)
+            })
+            div.append(img,h2,p,btn)
+            cont.append(div)
+        })
+    }
+    var i=false
+    function addToCart(el){
+        var cartArr=JSON.parse(localStorage.getItem("cartItem"))||[]
+        if(i){
+            alert("Item is already is in cart")
+            i=false
+        }else{
+            
+            cartArr.push(el)
+            localStorage.setItem("cartItem",JSON.stringify(cartArr))
+            i=true
+        }
+        console.log(i)
+        
+        
+    }
+    
+    
+</script>
+</html>

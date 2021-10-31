@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <input type="text" id="email" placeholder="Enter Your Email">
+    <input type="text" type="password" id="password" placeholder="Enter Your Password">
+    <button>Submit</button>
+</body>
+<script>
+    document.querySelector("button").addEventListener('click',SignIn)
+    var regdUsers=JSON.parse(localStorage.getItem("userData"))
+    function SignIn(){
+        var credentials=0
+        var email=document.querySelector('#email').value
+        var pass=document.querySelector('#password').value
+        if(email=='admin'&& pass=='admin'){
+            window.location.href='admin.html'
+        }else{
+            regdUsers.map(function(el){
+                if(el.Email==email && el.Password==pass){
+                    credentials=1
+                    //break
+                    //window.location.href='product.html'
+                }
+                
+            })
+            
+        }
+
+        console.log("Hi")
+        if(credentials){
+            console.log("HI")
+            window.location.href='form.html'
+        }else{
+            alert("Email or Password is Wrong")
+        }
+    }
+</script>
+</html>
