@@ -46,5 +46,4 @@ int main()
 	kLargest(arr, n, k);
 }
 
-// This article is contributed by Chhavi
 
