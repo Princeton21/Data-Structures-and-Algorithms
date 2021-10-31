@@ -3,7 +3,7 @@
   <img src="https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg" width=600 ><br/>
 <h1>Thank you everyone for your contribution<br/>
 I hope that by contributing to this repository throughout this event, 
-you have been motivated towards open source comtribution<h1/>
+you have been motivated towards open source contribution<h1/>
 <!---<h3>Submit Just 4 PRs this month to earn SWAGS and Tshirts🔥.<h3/>
 <div/>
 Hurry!!! ,there's less than a # week # left for this event.
