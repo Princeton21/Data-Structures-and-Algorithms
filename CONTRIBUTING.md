@@ -4,7 +4,7 @@ Welcome to Princeton21's DSA repository. Contribute to this repository to contri
 
 ## How to start? 
 
-- Find an issue that you think you can solve in the [Issues](https://github.com/Princeton21/Hacktoberfest_DSA_2021/issues) tab
+- Find an issue that you think you can solve in the [issues](https://github.com/Princeton21/Hacktoberfest_DSA_2021/issues) tab
 - Comment on the issue and it'll be assigned to you as soon as the maintainers get to it
 - Create a fork of this repository into your github account and add the necessary changes to your local repository
 - Make sure the changes you make conform to the contributing guidelines mentioned below
