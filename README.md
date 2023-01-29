@@ -12,9 +12,6 @@
 
 -----
 
-### Firstly
-### 📢 Register [here](https://hacktoberfest.com/) for Hacktoberfest and make 4️⃣ PRs this month to grab free SWAGS 🔥
-
 - Fork this repo <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/Princeton21/Data-Structures-and-Algorithms/fork" data-color-scheme="no-preference: light_high_contrast; light: light_high_contrast; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Princeton21/Data-Structures-and-Algorithms on GitHub">here</a>
 - Clone on your local machine
