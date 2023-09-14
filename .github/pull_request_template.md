@@ -1,5 +1,6 @@
 **Fixes issue:**
-<!-- [Mention the issue number it fixes or add the details of the changes if it doesn't has a specific issue. -->
+<!-- [Mention the issue number it fixes or add the details of the changes if it doesn't have a specific issue. -->
+<!-- For example #issuenumber -->
 
 
 **Changes:**
